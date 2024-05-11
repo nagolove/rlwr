@@ -1,6 +1,3 @@
-#pragma once
-/*#include "rlwr.h"*/
-
 #include "sol/sol.hpp"
 #include <lua.h>
 #include "include/raylib-lua-sol.hpp"
