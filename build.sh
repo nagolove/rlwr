@@ -22,7 +22,7 @@ if [[ "$TARGET" == "linux" ]]; then
     LINKER="ar"
 elif [[ "$TARGET" == "wasm" ]]; then
     echo "Компиляция для wasm..."
-    KOMPILER="emcc"
+    KOMPILER="em++"
     LINKER="emar"
 else
     echo "Неизвестная цель: $TARGET"
