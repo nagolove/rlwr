@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Значение по умолчанию
-TARGET="linux"
+TARGET=""
 
 # Обработка аргументов командной строки
 for arg in "$@"; do
