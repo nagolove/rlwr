@@ -46,7 +46,7 @@ elif [[ "$TARGET" == "wasm" ]]; then
         -I../sol2/single/include       \
         -I../lua                       \
         -I../raylib/raylib/include     \
-        ../raylib/raylib/libraylib.a   \
+        ../raylib/src/libraylib.a      \
         ../lua/liblua.a                \
         -o rlwr.o                      \
 
