@@ -3,8 +3,8 @@
 
 #include "raylib.h"
 #include "sol/sol.hpp"
-#include "./raylib-lua-sol-rlgl.hpp"
-#include "./raylib-lua-sol-raymath.hpp"
+#include "raylib-lua-sol-rlgl.hpp"
+#include "raylib-lua-sol-raymath.hpp"
 
 void raylib_lua_sol_color(sol::state& lua) {
     lua["LIGHTGRAY"] = Color(LIGHTGRAY);

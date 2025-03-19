@@ -38,17 +38,16 @@ if [[ "$TARGET" == "linux" ]]; then
 
 elif [[ "$TARGET" == "wasm" ]]; then
     echo "Компиляция для wasm..."
-    KOMPILER="em++"
+    KOMPILER="emcc"
     LINKER="emar"
 
-    $KOMPILER -c rlwr.cpp \
-        -I.                            \
-        -I../sol2/single/include       \
-        -I../lua                       \
-        -I../raylib/raylib/include     \
-        ../raylib/src/libraylib.a      \
-        ../lua/liblua.a                \
-        -o rlwr.o                      \
+    #cmd="$KOMPILER -c rlwr.cpp ../raylib/src/libraylib.a ../lua/liblua.a -I../lua -I../raylib/src -I../sol2/single/include -o rlwr.o "
+
+    cmd="$KOMPILER -c rlwr.cpp -I../lua -I../raylib/src -I../sol2/single/include -o rlwr.o "
+    #-DLUA_VERSION_NUM=505
+
+    echo "cmd '$cmd'"
+    $cmd
 
     $LINKER rcs librlwr.a rlwr.o
 

@@ -1,5 +1,5 @@
+#include "lua.h"
 #include "sol/sol.hpp"
-#include <lua.h>
 #include "include/raylib-lua-sol.hpp"
 
 struct rlwr_t {
@@ -7,10 +7,9 @@ struct rlwr_t {
 } rlwr_t;
 
 extern "C" {
-
-struct rlwr_t *rlwr_new();
-lua_State *rlwr_state(struct rlwr_t *rlwr);
-void rlwr_free(struct rlwr_t *rlwr);
+    struct rlwr_t *rlwr_new();
+    lua_State *rlwr_state(struct rlwr_t *rlwr);
+    void rlwr_free(struct rlwr_t *rlwr);
 }
 
 struct rlwr_t *rlwr_new() {
