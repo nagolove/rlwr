@@ -1135,7 +1135,7 @@ RAYLIB_LUA_SOL_ADD_FUNCTION(CodepointToUTF8);
   RAYLIB_LUA_SOL_ADD_FUNCTION(GetCollisionRayGround);
   */
 
-
+/*
   RAYLIB_LUA_SOL_ADD_FUNCTION(InitAudioDevice);
   RAYLIB_LUA_SOL_ADD_FUNCTION(CloseAudioDevice);
   RAYLIB_LUA_SOL_ADD_FUNCTION(IsAudioDeviceReady);
@@ -1193,6 +1193,7 @@ RAYLIB_LUA_SOL_ADD_FUNCTION(CodepointToUTF8);
   RAYLIB_LUA_SOL_ADD_FUNCTION(SetAudioStreamVolume);
   RAYLIB_LUA_SOL_ADD_FUNCTION(SetAudioStreamPitch);
   RAYLIB_LUA_SOL_ADD_FUNCTION(SetAudioStreamBufferSizeDefault);
+  */
 }
 
 void TraceLogWrapper(int messageType, const std::string& message) {

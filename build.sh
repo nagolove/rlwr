@@ -28,7 +28,7 @@ if [[ "$TARGET" == "linux" ]]; then
         -L../lua                       \
         -I../lua                       \
         -I../raylib/raylib/include     \
-        -L../raylib/raylib/            \
+        -L../raylib/src                \
         -lm                            \
         -llua                          \
         -lraylib                       \
@@ -43,7 +43,7 @@ elif [[ "$TARGET" == "wasm" ]]; then
 
     #cmd="$KOMPILER -c rlwr.cpp ../raylib/src/libraylib.a ../lua/liblua.a -I../lua -I../raylib/src -I../sol2/single/include -o rlwr.o "
 
-    cmd="$KOMPILER -c rlwr.cpp -I../lua -I../raylib/src -I../sol2/single/include -o rlwr.o "
+    cmd="$KOMPILER -c rlwr.cpp -llua -L../lua -I../lua -I../raylib/src -I../sol2/single/include -o rlwr.o "
     #-DLUA_VERSION_NUM=505
 
     echo "cmd '$cmd'"
